@@ -8,6 +8,7 @@ const phone = form.elements.phone;
 const region = form.elements.region;
 const submit = form.querySelector('button[type=submit]');
 const confirmation = document.querySelector('#brief-success');
+const confirmationId = document.querySelector('#brief-success-id');
 const service = new URLSearchParams(location.search).get('service');
 let requestId = null;
 let lastPayload = null;
@@ -73,12 +74,18 @@ form.addEventListener('submit', async event => {
       return;
     }
     if (!response.ok || !(await response.json()).ok) throw new Error('Submission failed');
+    const savedRequestId = requestId;
     form.reset();
     requestId = lastPayload = null;
     if (document.documentElement.lang === 'en') region.value = 'US';
-    formStatus.textContent = messages.sent;
-    if (typeof confirmation?.showModal === 'function') confirmation.showModal();
-    else window.alert(messages.sent);
+    const receipt = `${messages.reference} ${savedRequestId}`;
+    formStatus.textContent = `${messages.sent} ${receipt}`;
+    if (typeof confirmation?.showModal === 'function' && confirmationId) {
+      confirmationId.textContent = savedRequestId;
+      confirmation.showModal();
+    } else {
+      window.alert(`${messages.sent}\n${receipt}`);
+    }
   } catch {
     formStatus.textContent = messages.failed;
   } finally {

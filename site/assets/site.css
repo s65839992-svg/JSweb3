@@ -9,4 +9,14 @@ footer{border-top:1px solid var(--line);padding:1.8rem 0 2.4rem;display:flex;jus
 @media(max-width:800px){.hero{grid-template-columns:1fr}.blueprint{max-width:560px;width:100%}.catalog{grid-template-columns:1fr 1fr}.contact-layout{grid-template-columns:1fr}}
 @media(max-width:530px){.header-inner,main,footer{width:calc(100% - 32px)}.header-inner{display:grid;grid-template-columns:1fr auto;gap:.65rem;padding:.65rem 0}.header nav{grid-row:2;grid-column:1/-1;gap:1rem}.switch{grid-row:1;grid-column:2}.brand img{width:126px;height:42px}.catalog,.steps{grid-template-columns:1fr}.hero{padding-bottom:2rem}.section{padding:2rem 0}.phone-row{grid-template-columns:1fr}.channel-actions>*{min-height:44px}}
 .contact-intro{padding-bottom:1.4rem}.contact-intro h2{margin-bottom:.55rem}.contact-intro p{max-width:64ch}
-#brief-success{width:min(420px,calc(100% - 2rem));padding:1.5rem;border:1px solid var(--line);border-radius:.85rem;background:var(--panel);color:var(--text)}#brief-success::backdrop{background:#070d1cbd}#brief-success p{margin:.5rem 0 1rem}.primary:disabled{opacity:.65;cursor:wait}
+#brief-success{width:min(448px,calc(100% - 2rem));max-height:calc(100% - 2rem);overflow:auto;margin:auto;padding:clamp(1.35rem,6vw,2rem);box-sizing:border-box;border:1px solid #3a5379;border-radius:1.25rem;background:radial-gradient(ellipse at 0 0,#1d3657,transparent 67%),#111b30;color:var(--text);box-shadow:0 22px 90px #020615ab}
+#brief-success::backdrop{background:#050a17bb;backdrop-filter:blur(5px)}
+.receipt-mark{display:grid;place-items:center;width:3rem;height:3rem;margin-bottom:1rem;border-radius:.85rem;background:#133d40;color:#a5f3d5;border:1px solid #34756d;font-size:1.5rem;font-weight:800}
+#brief-success h2{font-size:1.65rem;line-height:1.23;letter-spacing:-.025em}
+#brief-success p{margin:.6rem 0 1.15rem}
+.receipt-reference{margin:0 0 1.2rem;padding:.7rem .9rem;border-radius:.65rem;background:#0d172a;border:1px solid #2c4261}
+.receipt-reference dt{font-size:.875rem;color:var(--muted)}
+.receipt-reference dd{margin:.18rem 0 0;color:var(--text);font: .875rem/1.5 ui-monospace,monospace;overflow-wrap:anywhere}
+#brief-success .button{justify-self:stretch}
+#form-status{overflow-wrap:anywhere}
+.primary:disabled{opacity:.65;cursor:wait}
