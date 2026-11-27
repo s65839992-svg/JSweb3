@@ -19,7 +19,7 @@ function doPost(event) {
       row = sheet.getLastRow();
     }
     if (!sheet.getRange(row,8).getValue()) {
-      MailApp.sendEmail('s65839993@gmail.com','JSweb3 收到新的项目需求',`新的项目需求已保存在 Google Drive。\n编号：${body.requestId}\n查看：${book.getUrl()}`);
+      MailApp.sendEmail('s65839992@gmail.com','JSweb3 收到新的项目需求',`新的项目需求已保存在 Google Drive。\n编号：${body.requestId}\n查看：${book.getUrl()}`);
       sheet.getRange(row,8).setValue(new Date());
       SpreadsheetApp.flush();
     }
