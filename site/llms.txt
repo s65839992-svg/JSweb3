@@ -1,0 +1,15 @@
+# JSweb3
+
+> Custom mobile app, website, corporate site, WeChat Mini Program, Web3 DApp and API integration services for China and global audiences.
+
+## 中文
+
+- [首页](https://jsweb3.dev/): APP、网站、企业官网、小程序和 Web3 DApp 定制开发，面向中国市场及全球用户。
+- [产品与业务](https://jsweb3.dev/services/): 了解 JSweb3 的 APP、网站、企业官网、小程序、Web3 DApp 和系统集成开发服务。
+- [联系我们](https://jsweb3.dev/contact/): 联系 JSweb3，提交 APP、官网、小程序或 Web3 DApp 项目需求，或通过 Telegram、微信、QQ 和 WhatsApp 找到我们。
+
+## English
+
+- [Home](https://jsweb3.dev/en/): Custom development for mobile apps, websites, company sites, mini programs and Web3 DApps for China and global audiences.
+- [Products & Services](https://jsweb3.dev/en/services/): Explore JSweb3 custom app, corporate website, WeChat Mini Program, Web3 DApp and API integration services.
+- [Contact](https://jsweb3.dev/en/contact/): Tell JSweb3 about your app, website, mini program or DApp project. Contact us via Telegram, WeChat, QQ or WhatsApp.

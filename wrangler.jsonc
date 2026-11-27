@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "jsweb3-intake",
+  "main": "backend/worker.mjs",
+  "compatibility_date": "2026-11-27",
+  "workers_dev": false,
+  "routes": [{ "pattern": "api.jsweb3.dev", "custom_domain": true }],
+  "ratelimits": [{ "name": "BRIEF_LIMITER", "namespace_id": "3271", "simple": { "limit": 5, "period": 60 } }]
+}
