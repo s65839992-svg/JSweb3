@@ -12,7 +12,10 @@ let requestId = null;
 let lastPayload = null;
 
 if (document.documentElement.lang === 'en') region.value = 'US';
-for (const input of [phone,region]) input.addEventListener('input', () => phone.setCustomValidity(''));
+for (const input of [phone,region]) input.addEventListener('input', () => {
+  if (phone.validity.customError) formStatus.textContent = '';
+  phone.setCustomValidity('');
+});
 for (const control of document.querySelectorAll('[data-copy],[data-copy-on-open]')) {
   control.addEventListener('click', async () => {
     try {
@@ -29,6 +32,7 @@ form.addEventListener('submit', async event => {
   const fields = new FormData(form);
   if (!normalizePhone(fields.get('phone'), fields.get('region'))) {
     phone.setCustomValidity(messages.badPhone);
+    formStatus.textContent = messages.badPhone;
     phone.reportValidity();
     return;
   }
